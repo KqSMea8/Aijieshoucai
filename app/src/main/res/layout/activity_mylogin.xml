@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f8f8f8"
+    android:fitsSystemWindows="true"
+    tools:context=".login.activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_22dp"
+            android:background="@color/colorPrimary" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_loginbg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/background_red" />
+
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16sp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/dimen_120dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dimen_10px"
+                app:contentPaddingLeft="@dimen/dimen_15dp"
+                app:contentPaddingRight="@dimen/dimen_15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_21dp"
+                        android:text="@string/string_phonenumber"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/white"
+                        android:hint="@string/string_hint_phone"
+                        android:text="18588857701"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="@dimen/dimen_1p5dp"
+                        android:background="@color/color_d7d7d7" />
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_6dp"
+                        android:text="@string/string_password"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/white"
+                        android:hint="@string/string_hint_password"
+                        android:inputType="textPassword"
+                        android:text="18588857701"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="@dimen/dimen_1p5dp"
+                        android:background="@color/color_d7d7d7" />
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:background="@drawable/circle_colorprimal_12px"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/string_login"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4dp"
+                        android:layout_marginBottom="@dimen/dimen_18dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_regist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/string_registnewuser"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/dimen_12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_forgotpassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/string_forgotpassword"
+                            android:textColor="@color/color_bababa"
+                            android:textSize="@dimen/dimen_12sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>

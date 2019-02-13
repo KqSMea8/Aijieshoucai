@@ -1,0 +1,49 @@
+package com.example.rongjiaying.aijieshoucai.constant;
+
+public interface UrlConstant {
+    String banner = InternetConstant.API_URL + "app/bannerlist";//banner
+    String sendCode = InternetConstant.API_URL + "app/getSMS";//发送验证码
+    String registUser = InternetConstant.API_URL + "app/register";//注册
+    String login = InternetConstant.API_URL + "app/login";//登录
+    String rollData = InternetConstant.API_URL + "app/getRolling";//滚动消息
+    String productList = InternetConstant.API_URL + "app/Produce/list";//产品列表
+    String ordersingningDetail = InternetConstant.API_URL + "app/process/list";//签约进度
+    String uploadOrderData = InternetConstant.API_URL + "app/saveorder";//录入订单
+    String orderList = InternetConstant.API_URL + "app/getOrderList";;//订单列表list
+    String commentquestion = InternetConstant.API_URL + "app/appProblem/list";;//常见问题
+    String savecaogao = InternetConstant.API_URL + "app/saveCaogao"; //保存草稿;
+    String caogaolist = InternetConstant.API_URL + "app/getOrderZero";
+    String orderCompletion = InternetConstant.API_URL + "app/trainorder";//初审补资料
+    String instanceorder = InternetConstant.API_URL + "app/instanceorder";//终审补资料
+    String myMessageData = InternetConstant.API_URL + "app/message/list";//消息列表
+    String myachievements = InternetConstant.API_URL + "app/myachievements";//我的业绩页面
+    String upMyImage = InternetConstant.API_URL + "app/uploadIcon";//上传头像
+    String achievementsStatistical = InternetConstant.API_URL + "app/AchievementsStatistical";//业绩统计
+    String initWithdrawalsrecord = InternetConstant.API_URL + "app/present/list";//提现记录 列表
+    String myBank = InternetConstant.API_URL + "app/getBanks";//我的银行卡
+    String saveBankNumber = InternetConstant.API_URL + "app/saveBank";//保存银行卡
+    String deleBank = InternetConstant.API_URL + "app/deteleBank";//删除银行卡
+    String updateBankDefault = InternetConstant.API_URL + "app/updateBankDefault";//设置默认银行卡
+    String bankName = InternetConstant.API_URL + "app/getBankFlag";//银行列表
+    String forgotPassword = InternetConstant.API_URL + "app/forgetPassword";//忘记密码
+    String savepresent = InternetConstant.API_URL + "app/savepresent";//提现
+    String getPresentListByMonthList = InternetConstant.API_URL + "app/getPresentListByMonth/list";//提现月份详情
+    String editPassword = InternetConstant.API_URL + "app/editpassword";//修改密码
+    String editname = InternetConstant.API_URL + "app/editname";//修改名字
+    String getRankingPresent = InternetConstant.API_URL + "app/getRankingPresent";;//经纪人排行榜  提现
+    String welcome = InternetConstant.API_URL + "app/welcome/list";//欢迎页面
+    String getRankingInCom = InternetConstant.API_URL + "app/getRankingInCom";;//经纪人排行榜  进件
+    String getRankingApprove = InternetConstant.API_URL + "app/getRankingApprove";;//经纪人排行榜  审批
+    String getRankingLevel = InternetConstant.API_URL + "app/getRankingLevel";;//经纪人排行榜  级别
+    String getRankingSize = InternetConstant.API_URL + "app/getRankingSize";//经纪人排行榜  团队
+    String myPersonal = InternetConstant.API_URL + "app/MyPersonal";//个人中心
+    String userDetail = InternetConstant.API_URL + "app/UserDetail";//经纪人详情
+    String editPhone = InternetConstant.API_URL + "app/editphone";;//修改手机
+    String getDirectUser = InternetConstant.API_URL + "app/getDirectUser";;//二级推荐人
+    String getInDirectUser = InternetConstant.API_URL + "app/getInDirectUser";;//三级推荐人
+    String getAppData = InternetConstant.API_URL + "app/getAppData";//获取app更新信息
+    String sharehtml=InternetConstant.API_URL + "myhtml/regist";;//分享页面
+    String getM = InternetConstant.API_URL + "app/getM";//得到M币 做活动 推荐 做任务
+    String comegroup =InternetConstant.API_URL + "app/comegroup";//邀请你加入直接联系人的群
+    String sankeAddGroup = InternetConstant.API_URL + "app/sankeAddGroup";;//散客入群
+}

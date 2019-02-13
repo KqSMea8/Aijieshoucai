@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".message.activity.ContactListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toplayout" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- 我的推荐人-->
+                <LinearLayout
+                    android:id="@+id/ll_mytuijian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_f8f8f8"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_12dp"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingRight="@dimen/dimen_12dp"
+                    android:paddingBottom="@dimen/dimen_14dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_mytuijian"
+                        android:layout_width="@dimen/dimen_20dp"
+                        android:layout_height="@dimen/dimen_12dp"
+                        android:src="@drawable/icon_dropdown2" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:text="我的推荐人"
+                        android:textColor="@color/color_979797"
+                        android:textSize="@dimen/dimen_14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_tuijiandata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_20dp"
+                    android:paddingTop="@dimen/dimen_5dp"
+                    android:paddingRight="@dimen/dimen_20dp"
+                    android:paddingBottom="@dimen/dimen_5dp"
+                    android:visibility="gone">
+
+                    <com.example.rongjiaying.aijieshoucai.widget.CustomShapeImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="@dimen/dimen_50dp"
+                        android:layout_height="@dimen/dimen_50dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/ic_launcher"
+                        app:leftBottomRadius="15dp"
+                        app:leftTopRadius="15dp"
+                        app:onlyDrawBorder="false"
+                        app:rightBottomRadius="15dp"
+                        app:rightTopRadius="15dp"
+                        app:shape="rectangle" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dimen_11dp"
+                        android:layout_weight="1"
+                        android:text="Ray"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_16sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="已齐架"
+                        android:textColor="@color/color_ff6900"
+                        android:textSize="@dimen/dimen_12sp" />
+                </LinearLayout>
+                <!-- 我的推荐人-->
+                <!-- 二级推荐人-->
+                <LinearLayout
+                    android:id="@+id/ll_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_f8f8f8"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_12dp"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingRight="@dimen/dimen_12dp"
+                    android:paddingBottom="@dimen/dimen_14dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_two_tuijian"
+                        android:layout_width="@dimen/dimen_20dp"
+                        android:layout_height="@dimen/dimen_12dp"
+                        android:src="@drawable/icon_dropdown2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:text="我的二级推荐"
+                        android:textColor="@color/color_979797"
+                        android:textSize="@dimen/dimen_14sp" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_two"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+
+                <!-- 二级推荐人-->
+                <!-- 三级推荐人-->
+                <LinearLayout
+                    android:id="@+id/ll_thity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_f8f8f8"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_12dp"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingRight="@dimen/dimen_12dp"
+                    android:paddingBottom="@dimen/dimen_14dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_thity_tuijian"
+                        android:layout_width="@dimen/dimen_20dp"
+                        android:layout_height="@dimen/dimen_12dp"
+                        android:src="@drawable/icon_dropdown2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:text="我的三级推荐"
+                        android:textColor="@color/color_979797"
+                        android:textSize="@dimen/dimen_14sp" />
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_thiry"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+                <!-- 三级推荐人-->
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+</FrameLayout>

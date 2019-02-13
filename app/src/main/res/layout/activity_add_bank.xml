@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".my.activity.AddBankActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toplayout" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- 新卡号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_20dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_20dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:text="新卡号"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_banknumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:hint="请输入新的银行卡号"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textColorHint="@color/color_bababa"
+                        android:textSize="@dimen/dimen_12sp" />
+                </LinearLayout>
+                <!-- 新卡号-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@color/color_d7d7d7" />
+                <!-- 银行名称-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_20dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_20dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:text="银行名称"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_bankname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:text="请选择该卡所属银行名称"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+                </LinearLayout>
+                <!-- 银行名称-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@color/color_d7d7d7" />
+
+                <!-- 开户行-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_20dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_20dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:text="开户行"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_deposit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:hint="请输入办理该卡的银行网点"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textColorHint="@color/color_bababa"
+                        android:textSize="@dimen/dimen_12sp" />
+                </LinearLayout>
+                <!-- 开户行-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@color/color_d7d7d7" />
+                <!-- 姓名-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_20dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_20dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:text="姓名"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:hint="请输入持卡人姓名"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textColorHint="@color/color_bababa"
+                        android:textSize="@dimen/dimen_12sp" />
+                </LinearLayout>
+                <!-- 姓名-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@color/color_d7d7d7" />
+                <!-- 预留手机-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_20dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_20dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:text="预留手机"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:hint="请输入该卡于银行预留的手机号"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textColorHint="@color/color_bababa"
+                        android:textSize="@dimen/dimen_12sp" />
+                </LinearLayout>
+                <!-- 预留手机-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@color/color_d7d7d7" />
+                <!-- 验证码-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_20dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_20dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:text="验证码"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_code"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:hint="请输入验证码"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textColorHint="@color/color_bababa"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_sendcode"
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:text="获取验证码"
+                        android:textColor="@color/color_4c5cf7"
+                        android:textSize="@dimen/dimen_12sp" />
+                </LinearLayout>
+                <!-- 验证码-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@color/color_d7d7d7" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_50dp"
+                    android:layout_marginTop="@dimen/dimen_60dp"
+                    android:layout_marginRight="@dimen/dimen_50dp"
+                    android:layout_marginBottom="@dimen/dimen_60dp"
+                    android:background="@drawable/circle__colorprimay_12dp"
+                    android:text="确认"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_14sp" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>

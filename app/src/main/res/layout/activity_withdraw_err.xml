@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".my.activity.WithdrawErrActivity">
+
+    <include layout="@layout/toplayout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="145dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icont_fail"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现失败"
+                android:layout_marginTop="@dimen/dimen_35dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/color_2f2f2f"
+                android:textSize="@dimen/dimen_18sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请联系客服处理"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/color_979797"
+                android:textSize="@dimen/dimen_12sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服热线：07507716797"
+                android:textColor="@color/color_2f2f2f"
+                android:textSize="@dimen/dimen_18sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_18dp"
+                />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_commit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_37dp"
+                android:background="@drawable/circle_colorprimal_12px"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dimen_30dp"
+                android:layout_marginRight="@dimen/dimen_30dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="返回"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_14sp" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

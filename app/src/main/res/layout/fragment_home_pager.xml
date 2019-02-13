@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f8f8f8"
+    tools:context=".home.fragment.HomePagerFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- 轮播图-->
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_200dp" />
+        <!-- 轮播图-->
+        <!-- 滚动条-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_7dp"
+          android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingRight="@dimen/dimen_10dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_horn" />
+
+
+
+            <!--<com.example.rongjiaying.aijieshoucai.widget.VerticalScrollTextView-->
+                <!--android:id="@+id/v_text_view"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+              <!---->
+                <!--android:layout_weight="1"-->
+                <!--app:vst_animDuration="1000"-->
+                <!--app:vst_scrollOrientation="up"-->
+                <!--app:vst_singleLine="true"-->
+                <!--app:vst_sleepTime="2000"-->
+                <!--app:vst_textColor="@color/color_b9b9b9"-->
+                <!--app:vst_textSize="14sp" />-->
+
+
+            <com.example.rongjiaying.aijieshoucai.widget.ZouMaDengTextView
+                android:id="@+id/v_text_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+              />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_more" />
+        </LinearLayout>
+
+        <!-- 滚动条-->
+
+        <!-- 业务-->
+        <LinearLayout
+            android:id="@+id/ll_businesslayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen_20dp"
+
+            android:paddingRight="@dimen/dimen_20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="20dp"
+                        android:background="@color/string_e92c2a" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_12dp"
+                        android:text="主营业务"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_checkallproduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看更多业务"
+                    android:textColor="@color/color_bababa"
+                    android:textSize="@dimen/dimen_12sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_business"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12dp" />
+
+        </LinearLayout>
+        <!-- 业务-->
+        <!-- 广告-->
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_advertising"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_90dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:src="@drawable/ic_boxing_default_image" />
+        <!-- 广告-->
+        <!-- 明星经纪人-->
+        <LinearLayout
+            android:id="@+id/ll_brokerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:paddingTop="@dimen/dimen_4dp"
+            android:paddingRight="@dimen/dimen_20dp"
+            android:paddingBottom="@dimen/dimen_4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="20dp"
+                        android:background="@color/string_e92c2a" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_12dp"
+                        android:text="明星经纪人"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_checkallrankinglist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看排行榜"
+                    android:textColor="@color/color_bababa"
+                    android:textSize="@dimen/dimen_12sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_broker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12dp" />
+
+        </LinearLayout>
+        <!-- 明星经纪人-->
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

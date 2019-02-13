@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.rongjiaying.aijieshoucai">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 极光短信 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 添加必要的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 必选蒲公英 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序录制音频 -->
+
+
+    <!-- 极光推送 -->
+    <!-- Required -->
+    <permission
+        android:name="com.example.rongjiaying.aijieshoucai.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.example.rongjiaying.aijieshoucai.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <!-- 极光推送 -->
+    <application
+        android:name="jiguang.chat.application.JGApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name">
+
+        <!-- 蒲公英 -->
+        <!-- 可选 -->
+        <activity android:name="com.pgyersdk.feedback.FeedbackActivity" />
+
+        <!-- 必选 -->
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="aeafe08b0c81e3f69e8d4554c3bb9eb6" />
+        <!-- 蒲公英 -->
+
+        <activity
+            android:name=".flash.activity.FlashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.activity.RegistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.ForGotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.EntryInformationActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name=".fileprovider.BoxingFileprocider"
+            android:authorities="${applicationId}.file.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/boxing_file_provider" />
+        </provider>
+
+        <activity
+            android:name=".my.activity.DraftsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.OrderRefusalDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.OrderCompletionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.OrderSigningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.activity.OrderLastCompletionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.CommentQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.CommentQuestionDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.DraftsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.MyMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.MyAchievementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.PerformanceStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.WithdrawalsrecordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".my.activity.AccountManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.MyBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.AddBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.EditNickNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.EditPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.WithdrawActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.WithdrawSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.WithdrawErrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.ProductListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.ProductDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.BrokderRankinglistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.BrokderRankingDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.CashRuleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.EditPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.MyRecommendationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my.activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".my.activity.ShareActivity" />
+
+        <!-- 分享 -->
+
+        <activity
+            android:name="cn.sharesdk.tencent.qq.ReceiveActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100371282" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 分享 -->
+
+
+        <!-- 极光推送 -->
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle" />
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.rongjiaying.aijieshoucai" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.example.rongjiaying.aijieshoucai.DataProvider"
+            android:exported="false" />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.example.rongjiaying.aijieshoucai" />
+            </intent-filter>
+        </service>
+        <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.example.rongjiaying.aijieshoucai.DownloadProvider"
+            android:exported="true" />
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.example.rongjiaying.aijieshoucai" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  MyReceiver为用户自定义的广播接收器 -->
+        <receiver
+            android:name=".jpush.receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.example.rongjiaying.aijieshoucai" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="ba07c1a18be9f321103e6a47" /> <!-- </>值来自开发者平台取得的AppKey -->
+        <!-- 极光推送 -->
+
+
+        <!-- 极光im -->
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="jchat.db" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="jiguang.chat.database.UserEntry, jiguang.chat.database.FriendEntry,              jiguang.chat.database.FriendRecommendEntry, jiguang.chat.database.ConversationEntry" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="4" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"></service>
+
+        <!-- 如果需要使用到位置服务，需要更换百度地图apikey为自己的apikey -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="UAkQeBK84ioVGzYgA1rSWYfuD4xYtpmV" />
+
+        <activity
+            android:name="jiguang.chat.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WelcomeStyle"></activity>
+        <activity
+            android:name="jiguang.chat.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jiguang.chat.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name="jiguang.chat.activity.BaseActivity" />
+        <activity
+            android:name="jiguang.chat.activity.FinishRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="jiguang.chat.activity.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"></activity>
+        <activity
+            android:name="jiguang.chat.activity.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.AboutJChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <!-- 这里有个需要注意的地方就是,自定义的弹窗需要自定义一个theme否则系统会默认给设置padding自己设置的属性不生效 -->
+        <activity
+            android:name="jiguang.chat.activity.PersonalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.NickSignActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.SearchForAddFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.SearchFriendInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.VerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.FriendRecommendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.SearchFriendDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.SearchContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="jiguang.chat.utils.imagepicker.ImageBaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.utils.imagepicker.ImageGridActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerTheme" />
+        <activity
+            android:name="jiguang.chat.utils.imagepicker.ImageCropActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerTheme" />
+        <activity
+            android:name="jiguang.chat.utils.imagepicker.ImagePreviewActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+        <activity
+            android:name="jiguang.chat.utils.imagepicker.ImagePreviewDelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+        <activity
+            android:name="jiguang.chat.pickerimage.PickerAlbumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.pickerimage.PickerAlbumPreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jiguang.chat.pickerimage.PickImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jiguang.chat.activity.BrowserViewPagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jiguang.chat.activity.historyfile.activity.BrowserFileImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jiguang.chat.activity.WatchVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jiguang.chat.activity.SendFileActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name="jiguang.chat.activity.historyfile.activity.HistoryFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name="jiguang.chat.activity.PlayVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jiguang.chat.location.activity.MapPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="jiguang.chat.activity.FriendInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.ChatDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.MembersInChatActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="jiguang.chat.activity.GroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.SearchMoreFriendsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="jiguang.chat.activity.SearchMoreGroupActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="jiguang.chat.activity.FriendSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.SetNoteNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.ChooseAtMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.GroupGridViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.GroupNotFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.SelectFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.DownLoadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.CreateGroupActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="jiguang.chat.utils.photovideo.takevideo.CameraActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseFullTheme" />
+        <activity
+            android:name="jiguang.chat.activity.SearchGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="jiguang.chat.activity.SearchAtMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="jiguang.chat.activity.ForwardMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="jiguang.chat.activity.Person2CodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="jiguang.chat.activity.ScanResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="jiguang.chat.activity.CommonScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="jiguang.chat.activity.receiptmessage.ReceiptMessageListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="jiguang.chat.activity.SearchFriendBusinessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="jiguang.chat.activity.FriendListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.NotFriendSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes" />
+        <activity
+            android:name="jiguang.chat.activity.GroupAvatarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTh" />
+        <!-- 极光im -->
+        <activity
+            android:name=".message.activity.ExserviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".message.activity.ContactListActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".my.activity.OrderActivity"></activity>
+    </application>
+
+</manifest>

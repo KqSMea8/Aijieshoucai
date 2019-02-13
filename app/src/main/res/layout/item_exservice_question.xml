@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_15dp"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            android:ems="1"
+            android:text="常见问题"
+            android:textColor="@color/color_2f2f2f"
+            android:textSize="14sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_question"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_title" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="214dp"
+            android:layout_alignTop="@id/rv_question"
+            android:layout_alignBottom="@id/rv_question"
+            android:layout_toLeftOf="@id/rv_question"
+            android:layout_toRightOf="@id/tv_title"
+            android:background="@color/color_eeeeee" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="换一换"
+            android:textColor="@color/color_2f2f2f"
+            android:textSize="@dimen/dimen_16sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:background="@color/color_d8d8d8"
+        android:padding="@dimen/dimen_10dp"
+        android:text="02:12"
+        android:textColor="@color/white" />
+</LinearLayout>

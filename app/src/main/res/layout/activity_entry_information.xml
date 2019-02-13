@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f8f8f8"
+    tools:context=".home.activity.EntryInformationActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <include layout="@layout/toplayout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 姓名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_10dp">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="wrap_content"
+                    android:text="姓名"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_username"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/string_hint_username"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textColorHint="@color/color_bababa"
+                    android:textSize="@dimen/dimen_14sp" />
+
+            </LinearLayout>
+            <!-- 姓名-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:background="@color/color_d7d7d7" />
+            <!-- 手机号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_10dp">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="wrap_content"
+                    android:text="手机号"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入手机号"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textColorHint="@color/color_bababa"
+                    android:textSize="@dimen/dimen_14sp" />
+
+            </LinearLayout>
+            <!-- 手机号-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:background="@color/color_d7d7d7" />
+            <!-- 验证码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_10dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="wrap_content"
+                    android:text="验证码"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入验证码"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textColorHint="@color/color_bababa"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_sendcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="获取验证码"
+                    android:textColor="@color/color_4c5cf7"
+                    android:textSize="@dimen/dimen_14sp" />
+            </LinearLayout>
+            <!-- 验证码-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:background="@color/color_d7d7d7" />
+            <!-- 申请产品-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_10dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="wrap_content"
+                    android:text="申请产品"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_producename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/string_hint_selectproduct"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textColorHint="@color/color_bababa"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="@dimen/dimen_20dp"
+                        android:layout_height="@dimen/dimen_20dp"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:src="@drawable/icon_drop_down" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 申请产品-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:background="@color/color_d7d7d7" />
+            <!-- 行驶证-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_10dp">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="行驶证"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_drivinglicense"
+                    android:layout_width="@dimen/dimen_45dp"
+                    android:layout_height="@dimen/dimen_36dp"
+                    android:src="@drawable/icon_addphoto" />
+            </LinearLayout>
+            <!-- 行驶证-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:background="@color/color_d7d7d7" />
+            <!-- 行驶证-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_10dp">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="身份证正面"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_front"
+                    android:layout_width="@dimen/dimen_45dp"
+                    android:layout_height="@dimen/dimen_36dp"
+                    android:src="@drawable/icon_addphoto" />
+            </LinearLayout>
+            <!-- 行驶证-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:background="@color/color_d7d7d7" />
+            <!-- 行驶证-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_10dp">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="身份证反面"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_reverse"
+                    android:layout_width="@dimen/dimen_45dp"
+                    android:layout_height="@dimen/dimen_36dp"
+                    android:src="@drawable/icon_addphoto" />
+            </LinearLayout>
+            <!-- 行驶证-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:background="@color/color_d7d7d7" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_commit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_25dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_25dp"
+                android:background="@drawable/circle_colorprimal_12px"
+                android:gravity="center"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:text="确认提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_14sp" />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+</FrameLayout>

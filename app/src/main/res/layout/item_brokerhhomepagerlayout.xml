@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.example.rongjiaying.aijieshoucai.widget.CustomShapeImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/dimen_60dp"
+        android:layout_height="@dimen/dimen_60dp"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_horizontal"
+        app:leftBottomRadius="15dp"
+        app:leftTopRadius="15dp"
+        app:onlyDrawBorder="false"
+        app:rightBottomRadius="15dp"
+        app:rightTopRadius="15dp"
+        app:shape="rectangle" />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_9dp"
+
+        android:lines="1"
+        android:ems="5"
+        android:gravity="center_horizontal"
+        android:ellipsize="end"
+        android:text="车主贷"
+        android:textColor="@color/color_2f2f2f"
+        android:textSize="@dimen/dimen_12sp" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_mypoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="财力值：190000"
+        android:textColor="@color/color_d0995e"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dimen_18dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:textSize="@dimen/dimen_9sp"
+        android:lines="1"
+        android:ems="11"
+        />
+</LinearLayout>

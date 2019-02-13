@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_10dp">
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_level"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_level"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_d7d7d7"
+            android:textSize="@dimen/dimen_24sp"
+            android:visibility="gone" />
+
+
+
+
+        <com.example.rongjiaying.aijieshoucai.widget.CustomShapeImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/dimen_48dp"
+            android:layout_height="@dimen/dimen_48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_22dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:leftBottomRadius="15dp"
+            app:leftTopRadius="15dp"
+            app:onlyDrawBorder="false"
+            app:rightBottomRadius="15dp"
+            app:rightTopRadius="15dp"
+            app:shape="rectangle" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_6dp"
+            android:layout_weight="1"
+            android:text="慕容复"
+            android:textColor="@color/color_2f2f2f"
+            android:textSize="@dimen/dimen_14sp"
+
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="8888元"
+            android:textColor="@color/color_ff6900"
+            android:textSize="@dimen/dimen_14sp" />
+    </LinearLayout>
+</LinearLayout>

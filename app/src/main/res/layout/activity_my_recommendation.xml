@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".my.activity.MyRecommendationActivity">
+
+
+    <include layout="@layout/toplayout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_10dp">
+
+        <com.example.rongjiaying.aijieshoucai.widget.CustomShapeImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="@dimen/dimen_60dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pic_user_off"
+            app:leftBottomRadius="15dp"
+            app:leftTopRadius="15dp"
+            app:onlyDrawBorder="false"
+            app:rightBottomRadius="15dp"
+            app:rightTopRadius="15dp"
+            app:shape="rectangle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!-- 姓名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="wrap_content"
+                    android:text="姓名"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="name"
+                    android:textColor="@color/color_979797"
+                    android:textSize="@dimen/dimen_14sp" />
+
+            </LinearLayout>
+            <!-- 姓名-->
+            <!-- 等级-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="wrap_content"
+                    android:text="等级"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="level"
+                    android:textColor="@color/color_979797"
+                    android:textSize="@dimen/dimen_14sp" />
+
+            </LinearLayout>
+            <!-- 等级-->
+            <!-- 状态-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="wrap_content"
+                    android:text="状态"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="status"
+                    android:textColor="@color/color_979797"
+                    android:textSize="@dimen/dimen_14sp" />
+
+            </LinearLayout>
+            <!-- 状态-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/color_d7d7d7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_15dp"
+            android:paddingBottom="@dimen/dimen_15dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_allpersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="111"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:text="总推荐人数"
+                android:textColor="@color/color_2f2f2f"
+                android:textSize="@dimen/dimen_14sp" />
+        </LinearLayout>
+<View
+    android:layout_width="1dp"
+    android:layout_gravity="center_vertical"
+    android:background="@color/color_d7d7d7"
+    android:layout_height="@dimen/dimen_60dp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_15dp"
+            android:paddingBottom="@dimen/dimen_15dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_secondperson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="111"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:text="二级推荐人数"
+                android:textColor="@color/color_2f2f2f"
+                android:textSize="@dimen/dimen_14sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_d7d7d7"
+            android:layout_height="@dimen/dimen_60dp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_15dp"
+            android:paddingBottom="@dimen/dimen_15dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_thirdperson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="111"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:text="三级推荐人数"
+                android:textColor="@color/color_2f2f2f"
+                android:textSize="@dimen/dimen_14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dimen_23dp"
+    android:background="@color/color_f8f8f8"
+    android:paddingBottom="@dimen/dimen_23dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_selectsencond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14sp"
+            android:paddingLeft="@dimen/dimen_40dp"
+            android:paddingRight="@dimen/dimen_40dp"
+            android:paddingBottom="@dimen/dimen_6dp"
+            android:paddingTop="@dimen/dimen_6dp"
+            android:background="@drawable/circle_colorprimal_3dp_left"
+            android:text="二级推荐"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_selectthiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dimen_14sp"
+            android:paddingLeft="@dimen/dimen_40dp"
+            android:paddingRight="@dimen/dimen_40dp"
+            android:paddingBottom="@dimen/dimen_6dp"
+            android:paddingTop="@dimen/dimen_6dp"
+            android:background="@drawable/circle_white_3dp_right"
+            android:text="三级推荐"/>
+
+    </LinearLayout>
+</FrameLayout>
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

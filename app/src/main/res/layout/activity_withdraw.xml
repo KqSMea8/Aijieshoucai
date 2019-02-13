@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".my.activity.WithdrawActivity">
+    <!-- 红色部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pic_architecturalsilhouette"
+            android:orientation="vertical">
+
+            <include layout="@layout/toplayout" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="本次提现（元）"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_withdrawmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_marginBottom="@dimen/dimen_40dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_36sp" />
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_30dp"
+                android:layout_marginRight="@dimen/dimen_30dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_g"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_30dp"
+                    android:background="@drawable/circle_eee_12dp"
+                    android:hint="输入要变现的G币数量"
+                    android:padding="@dimen/dimen_10dp"
+                    android:digits="1234567890."
+                    android:textColor="@color/color_2f2f2f"
+                    android:textColorHint="@color/color_979797" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="剩余G币数量：0个"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_gerrmax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/dimen_12dp"
+                    android:text="不能超出持有G币最大数量"
+                    android:textColor="@color/color_e92c2a"
+                    android:textSize="@dimen/dimen_12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_checkg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_36dp"
+                    android:text="您本次可以搭配0个M币一同提现"
+                    android:textColor="@color/string_257ace"
+                    android:textSize="@dimen/dimen_12sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890."
+                    android:layout_marginTop="@dimen/dimen_30dp"
+                    android:background="@drawable/circle_eee_12dp"
+                    android:hint="输入要变现的M币数量"
+                    android:padding="@dimen/dimen_10dp"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textColorHint="@color/color_979797" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="剩余M币数量：0个"
+                    android:textColor="@color/color_2f2f2f"
+                    android:textSize="@dimen/dimen_12sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_113dp"
+                    android:layout_marginBottom="@dimen/dimen_43dp"
+                    android:background="@drawable/circle__colorprimay_12dp"
+                    android:text="发起提现"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_14sp" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/progressbar"
+    android:visibility="gone"
+    android:layout_gravity="center"/>
+</FrameLayout>

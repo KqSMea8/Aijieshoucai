@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.activity.HomeActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--android:background="@drawable/pic_projection"-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+  >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+            android:orientation="horizontal">
+            <!-- 首页-->
+            <LinearLayout
+                android:id="@+id/ll_homepager"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_3dp"
+                android:paddingBottom="@dimen/dimen_3dp">
+
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_homepager"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:src="@drawable/icon_homepager_select" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_homepager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首页"
+                    android:textColor="@color/color_e92c2a"
+                    android:textSize="@dimen/dimen_12sp" />
+
+            </LinearLayout>
+            <!-- 首页-->
+            <!-- 借款-->
+            <LinearLayout
+                android:id="@+id/ll_borrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_3dp"
+                android:paddingBottom="@dimen/dimen_3dp">
+
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_borrow"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:src="@drawable/icon_borrow" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_borrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="借款"
+                    android:textColor="@color/color_bababa"
+                    android:textSize="@dimen/dimen_12sp" />
+
+            </LinearLayout>
+            <!-- 借款-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <!-- 订单-->
+            <LinearLayout
+                android:id="@+id/ll_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_3dp"
+                android:paddingBottom="@dimen/dimen_3dp">
+
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_message"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:src="@drawable/icon_information" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="搜财"
+                    android:textColor="@color/color_bababa"
+                    android:textSize="@dimen/dimen_12sp" />
+
+            </LinearLayout>
+            <!-- 订单-->
+            <!-- 个人-->
+            <LinearLayout
+                android:id="@+id/ll_my"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_3dp"
+                android:paddingBottom="@dimen/dimen_3dp">
+
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_my"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:src="@drawable/icon_my" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_my"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个人"
+                    android:textColor="@color/color_bababa"
+                    android:textSize="@dimen/dimen_12sp" />
+
+            </LinearLayout>
+            <!-- 个人-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:paddingBottom="@dimen/dimen_3dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/fab"
+                android:layout_width="@dimen/dimen_45dp"
+                android:layout_height="@dimen/dimen_45dp"
+                android:src="@drawable/icon_add" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快速申请"
+                android:textColor="@color/color_bababa"
+                android:textSize="@dimen/dimen_12sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

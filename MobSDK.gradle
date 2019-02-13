@@ -1,0 +1,44 @@
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    appKey "24b1c2ad1d083"
+    appSecret "fa0875c80af63e25572baee16db29111"
+    ShareSDK {
+        devInfo {
+            SinaWeibo {
+                appKey "568898243"
+                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Wechat {
+                appId "wxaeffe2d41a8a398b"
+                appSecret "b13f3c0b08e0903e30d689e11ef877f4"
+                userName "aijiesoucai"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+                BypassApproval="false"
+                Enable="true"
+            }
+
+            QQ {
+                appId "1108084616"
+                appKey "WoiPvs1qP44eUMj8"
+            }
+
+
+
+            WechatMoments {
+                appId "wxaeffe2d41a8a398b"
+                appSecret "b13f3c0b08e0903e30d689e11ef877f4"
+                BypassApproval="false"
+                Enable="true"
+            }
+            WechatFavorite {
+                appId "wxaeffe2d41a8a398b"
+                appSecret "b13f3c0b08e0903e30d689e11ef877f4"
+                Enable="true"
+            }
+        }
+    }
+}
