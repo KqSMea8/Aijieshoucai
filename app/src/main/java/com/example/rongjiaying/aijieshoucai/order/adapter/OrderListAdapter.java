@@ -45,60 +45,84 @@ public class OrderListAdapter extends SimpleAdapter<OrderListBean> {
 
         int status = item.getStatus();
         if (type == 0) {
-            //状态
-            switch (status) {
-                case 2:
-                case 3:
-                    tvStatus.setText("初审中");
-                    tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
-                    break;
-                case 4:
-                    tvStatus.setText("终审中");
-                    tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
-                    break;
-                case 5:
-                case 6:
-                    if (item.getBackStatus() == 1) {
-                        tvStatus.setText("请补全资料");
-                        tvStatus.setTextColor(context.getResources().getColor(R.color.color_4C5CF7));
-                    } else {
-                        tvStatus.setText("已拒批");
-                        tvStatus.setTextColor(context.getResources().getColor(R.color.color_e92c2a));
-                    }
 
-
-                    tvStatus.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            if (onOrderItemListener != null) {
-                                if (item.getStatus() == 5)//初审
-                                {
-                                    if (item.getBackStatus() == 1)//backstatus 1补全资料 2 拒批
-                                    {
-
-                                        onOrderItemListener.checkMessageFirstTral(item);
-                                    } else {
-                                        onOrderItemListener.checkMessageRefusal(item);
-                                    }
-
-                                } else if (item.getStatus() == 6)//终审
-                                {
-                                    if (item.getBackStatus() == 1)//backstatus 1补全资料 2 拒批
-                                    {
-                                        onOrderItemListener.checkMessageLastInstance(item);
-                                    } else {
-
-                                        onOrderItemListener.checkMessageRefusal(item);
-                                    }
-
-                                }
-                            }
-                        }
-                    });
-
-
-                    break;
+            if ((item.getStatus()+"").equals("1"))
+            {
+                tvStatus.setText("待初审");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
             }
+           else if ((item.getStatus()+"").equals("2"))
+            {
+                tvStatus.setText("初审待复审");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
+            }
+            else if ((item.getStatus()+"").equals("3"))
+            {
+                tvStatus.setText("初审增添资料待上传");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
+            }
+            else if ((item.getStatus()+"").equals("4"))
+            {
+                tvStatus.setText("初审增添资料待审核");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
+            }
+            else if ((item.getStatus()+"").equals("5"))
+            {
+                tvStatus.setText("初审增添资料待复审");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
+            }
+            else if ((item.getStatus()+"").equals("6"))
+            {
+                tvStatus.setText("待指派装G");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
+            }
+            else if ((item.getStatus()+"").equals("7"))
+            {
+                tvStatus.setText("待装G");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
+            }
+            else if ((item.getStatus()+"").equals("8"))
+            {
+                tvStatus.setText("待指派权证");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
+            }
+            else if ((item.getStatus()+"").equals("9"))
+            {
+                tvStatus.setText("待权证");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
+            }
+            else if ((item.getStatus()+"").equals("10"))
+            {
+                tvStatus.setText("已完成");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_178C68));
+            }
+            else if ((item.getStatus()+"").equals("1-1"))
+            {   tvStatus.setText("请补全资料");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_4C5CF7));
+                tvStatus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (onOrderItemListener != null) {
+                            onOrderItemListener.checkMessageFirstTral(item);
+                        }
+                    }
+                });
+
+            }
+            else if ((item.getStatus()+"").equals("2-1"))
+            {   tvStatus.setText("请补全资料");
+                tvStatus.setTextColor(context.getResources().getColor(R.color.color_4C5CF7));
+                tvStatus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (onOrderItemListener != null) {
+                            onOrderItemListener.checkMessageLastInstance(item);
+                        }
+                    }
+                });
+
+            }
+
         } else if (type == 1) {
             tvStatus.setText("签约中");
             tvStatus.setTextColor(context.getResources().getColor(R.color.color_e92c2a));

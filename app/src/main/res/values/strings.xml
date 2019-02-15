@@ -46,7 +46,7 @@
     <string name="string_orderrefusaldetail">拒批详情</string>
     <string name="string_hint_username">请输入姓名</string>
     <string name="string_hint_selectproduct">请选择申请产品</string>
-    <string name="string_string_orderlastcompletion">终审资料补全</string>
+    <string name="string_string_orderlastcompletion">初审增添资料待上传</string>
     <string name="string_commentquestion">常见问题</string>
     <string name="string_commentquestiontdetail">常见问题详情</string>
     <string name="string_mymessage">系统通知</string>

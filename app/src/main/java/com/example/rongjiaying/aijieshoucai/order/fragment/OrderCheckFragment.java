@@ -208,6 +208,7 @@ public class OrderCheckFragment extends BaseFragment {
                             org.json.JSONObject jsonObject = new org.json.JSONObject(response.body());
 
                             int code = jsonObject.getInt("code");
+                            Log.i("asdf","obj "+jsonObject.getString("msg"));
                             if (code == 0 && page == 0) {
                                 List<OrderListBean> orderListBeans = com.alibaba.fastjson.JSONObject.parseArray(jsonObject.getString("msg"), OrderListBean.class);
                                 if (page == 0) {

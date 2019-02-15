@@ -16,8 +16,8 @@ android {
         applicationId "com.example.rongjiaying.aijieshoucai"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 21
-        versionName "21.0"
+        versionCode 22
+        versionName "22.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         ndk {
@@ -124,8 +124,12 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.2'
     //二维码
     implementation 'com.google.zxing:core:3.3.0'
+
     // 此处以JMessage 2.7.0 版本为例。
     // implementation 'cn.jiguang.sdk:jcore:1.2.3'
     // 此处以JCore 1.2.3 版本为例。
     //极光im
+
+    //长图
+    implementation 'com.shizhefei:LargeImageView:1.1.0'
 }

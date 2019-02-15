@@ -23,38 +23,11 @@
                 android:orientation="vertical">
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/dimen_10dp">
-
-                    <TextView
-                        android:layout_width="@dimen/dimen_90dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="证明类型"
-                        android:textColor="@color/color_2f2f2f"
-                        android:textSize="@dimen/dimen_14sp" />
 
 
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/recyclerview"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
 
 
-                </LinearLayout>
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginLeft="@dimen/dimen_10dp"
-                    android:layout_marginRight="@dimen/dimen_10dp"
-                    android:background="@color/color_d7d7d7" />
-                <!-- 行驶证-->
+                <!-- 营业执照-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -71,17 +44,161 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="营业执照"
-                        android:visibility="invisible"
                         android:textColor="@color/color_2f2f2f"
                         android:textSize="@dimen/dimen_14sp" />
 
                     <android.support.v7.widget.AppCompatImageView
-                        android:id="@+id/iv_icon"
+                        android:id="@+id/iv_icon1"
                         android:layout_width="@dimen/dimen_45dp"
                         android:layout_height="@dimen/dimen_36dp"
                         android:src="@drawable/icon_addphoto" />
                 </LinearLayout>
-                <!-- 行驶证-->
+                <!-- 营业执照-->
+
+                <!-- 寿险保单-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_5dp"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:paddingBottom="@dimen/dimen_10dp">
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="寿险保单"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_icon2"
+                        android:layout_width="@dimen/dimen_45dp"
+                        android:layout_height="@dimen/dimen_36dp"
+                        android:src="@drawable/icon_addphoto" />
+                </LinearLayout>
+                <!-- 寿险保单-->
+
+                <!-- 房产证-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_5dp"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:paddingBottom="@dimen/dimen_10dp">
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="房产证"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_icon3"
+                        android:layout_width="@dimen/dimen_45dp"
+                        android:layout_height="@dimen/dimen_36dp"
+                        android:src="@drawable/icon_addphoto" />
+                </LinearLayout>
+                <!-- 房产证-->
+
+                <!-- 公积金截图-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_5dp"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:paddingBottom="@dimen/dimen_10dp">
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="公积金截图"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_icon4"
+                        android:layout_width="@dimen/dimen_45dp"
+                        android:layout_height="@dimen/dimen_36dp"
+                        android:src="@drawable/icon_addphoto" />
+                </LinearLayout>
+                <!-- 公积金截图-->
+
+                <!-- 社保截图-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_5dp"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:paddingBottom="@dimen/dimen_10dp">
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="社保截图"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_icon5"
+                        android:layout_width="@dimen/dimen_45dp"
+                        android:layout_height="@dimen/dimen_36dp"
+                        android:src="@drawable/icon_addphoto" />
+                </LinearLayout>
+                <!-- 社保截图-->
+
+                <!-- 芝麻信用分截图-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_5dp"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:paddingBottom="@dimen/dimen_10dp">
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="芝麻信用分截图"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_icon6"
+                        android:layout_width="@dimen/dimen_45dp"
+                        android:layout_height="@dimen/dimen_36dp"
+                        android:src="@drawable/icon_addphoto" />
+                </LinearLayout>
+                <!-- 芝麻信用分截图-->
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/tv_commit"

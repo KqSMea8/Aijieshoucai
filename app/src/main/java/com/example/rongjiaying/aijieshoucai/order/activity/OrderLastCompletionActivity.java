@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -21,35 +19,32 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.rongjiaying.aijieshoucai.BaseActivity;
 import com.example.rongjiaying.aijieshoucai.R;
-import com.example.rongjiaying.aijieshoucai.order.adapter.DocumentTypeBeanAdapter;
-import com.example.rongjiaying.aijieshoucai.order.bean.DocumenTtypeBean;
+import com.example.rongjiaying.aijieshoucai.callback.ComViewProgressBarStringCallback;
 import com.example.rongjiaying.aijieshoucai.order.bean.OrderListBean;
 import com.example.rongjiaying.aijieshoucai.order.eventbus.OrderListItemDeleEventbus;
 import com.example.rongjiaying.aijieshoucai.util.HttpUtil;
 import com.example.rongjiaying.aijieshoucai.util.Judge;
 import com.lzy.okgo.OkGo;
-import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
-import com.lzy.okgo.request.base.Request;
 import com.mylhyl.acp.Acp;
 import com.mylhyl.acp.AcpListener;
 import com.mylhyl.acp.AcpOptions;
 
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 终审补资料
+ * 初审增添资料待上传
  */
 public class OrderLastCompletionActivity extends BaseActivity implements View.OnClickListener {
-    DocumentTypeBeanAdapter documentTypeBeanAdapter;
-    AppCompatImageView ivIcon;
-OrderListBean orderListBean;
-ProgressBar progressBar;
+
+    AppCompatImageView ivIcon1, ivIcon2, ivIcon3, ivIcon4, ivIcon5, ivIcon6;//营业执照
+    OrderListBean orderListBean;
+    ProgressBar progressBar;
+    int type = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,45 +52,23 @@ ProgressBar progressBar;
         findViewById(R.id.iv_back).setOnClickListener(this);
         AppCompatTextView tvTitle = findViewById(R.id.tv_title);
         tvTitle.setText(getString(R.string.string_string_orderlastcompletion));
-        orderListBean=getIntent().getParcelableExtra("item");
-        //证件类型
-        RecyclerView recyclerView = findViewById(R.id.recyclerview);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-        documentTypeBeanAdapter = new DocumentTypeBeanAdapter(getActivity());
-        recyclerView.setAdapter(documentTypeBeanAdapter);
-        //证件类型
-        progressBar=findViewById(R.id.progressbar);
-        List<DocumenTtypeBean> list = initData();
-        documentTypeBeanAdapter.refreshData(list);
-
-        documentTypeBeanAdapter.setOnDocumentTypeListener(new DocumentTypeBeanAdapter.OnDocumentTypeListener() {
-            @Override
-            public void onDocumentTypeItem(DocumenTtypeBean item) {
-                int position = documentTypeBeanAdapter.getDatas().indexOf(item);
-                if (position != -1) {
-                    documentTypeBeanAdapter.setCheckPositon(position);
-                }
-            }
-        });
-
-
-        ivIcon = findViewById(R.id.iv_icon);
-        ivIcon.setOnClickListener(this);
+        orderListBean = getIntent().getParcelableExtra("item");
+        progressBar = findViewById(R.id.progressbar);
+        ivIcon1 = findViewById(R.id.iv_icon1);
+        ivIcon1.setOnClickListener(this);
+        ivIcon2 = findViewById(R.id.iv_icon2);
+        ivIcon2.setOnClickListener(this);
+        ivIcon3 = findViewById(R.id.iv_icon3);
+        ivIcon3.setOnClickListener(this);
+        ivIcon4 = findViewById(R.id.iv_icon4);
+        ivIcon4.setOnClickListener(this);
+        ivIcon5 = findViewById(R.id.iv_icon5);
+        ivIcon5.setOnClickListener(this);
+        ivIcon6 = findViewById(R.id.iv_icon6);
+        ivIcon6.setOnClickListener(this);
         findViewById(R.id.tv_commit).setOnClickListener(this);
     }
 
-    private List<DocumenTtypeBean> initData() {
-        List<DocumenTtypeBean> documenTtypeBeans = new ArrayList<>();
-        String[] titles = new String[]{"营业执照", "寿险保单", "房产证/购房合同", "公积金截图", "社保截图", "芝麻信用分截图"};
-        for (int i = 0; i < titles.length; i++) {
-            DocumenTtypeBean documenTtypeBean = new DocumenTtypeBean();
-            documenTtypeBean.setId((i + 1));
-            documenTtypeBean.setIscheck(false);
-            documenTtypeBean.setTitle(titles[i]);
-            documenTtypeBeans.add(documenTtypeBean);
-        }
-        return documenTtypeBeans;
-    }
 
     @Override
     public AppCompatActivity getActivity() {
@@ -109,56 +82,78 @@ ProgressBar progressBar;
                 finish();
                 break;
 
-            case R.id.iv_icon:
+            case R.id.iv_icon1:
+                type = 1;
+                selectImage();
+                break;
+            case R.id.iv_icon2:
+                type = 2;
+                selectImage();
+                break;
+
+
+            case R.id.iv_icon3:
+                type = 3;
+                selectImage();
+                break;
+
+
+            case R.id.iv_icon4:
+                type = 4;
+                selectImage();
+                break;
+
+            case R.id.iv_icon5:
+                type = 5;
+                selectImage();
+                break;
+
+            case R.id.iv_icon6:
+                type = 6;
                 selectImage();
                 break;
 
             case R.id.tv_commit:
-                if (documentTypeBeanAdapter.getPosition().getId() == 0) {
-                    Toast.makeText(getActivity(), "请勾选证件类型", Toast.LENGTH_SHORT).show();
-                } else if (Judge.getBoolean_isNull(image)) {
-                    Toast.makeText(getActivity(), "请选择证件图片", Toast.LENGTH_SHORT).show();
-                } else {
-                    HttpUtil.instanceorder(documentTypeBeanAdapter.getPosition().getId()+"",
-                            orderListBean.getOrderCode(),
-                            image,
-                            new StringCallback() {
+                if (!Judge.getBoolean_isNull(image1) && !Judge.getBoolean_isNull(image2)
+                        && !Judge.getBoolean_isNull(image3) && !Judge.getBoolean_isNull(image4)
+                        && !Judge.getBoolean_isNull(image5) && !Judge.getBoolean_isNull(image6)) {
+
+
+                    HttpUtil.instanceorder(orderListBean.getOrderCode(),
+                            image1,
+                            image2,
+                            image3,
+                            image4,
+                            image5,
+                            image6,
+                            new ComViewProgressBarStringCallback(progressBar,v) {
                                 @Override
                                 public void onSuccess(Response<String> response) {
                                     try {
-                                        JSONObject jsonObject=new JSONObject(response.body());
-                                        int code=jsonObject.getInt("code");
+                                        org.json.JSONObject jsonObject = new org.json.JSONObject(response.body());
                                         Log.i("asdf",""+response.body());
-                                        if (code==0)
-                                        {
+                                        int code = jsonObject.getInt("code");
+                                        if (code == 0) {
                                             EventBus.getDefault().post(new OrderListItemDeleEventbus(orderListBean));
                                             finish();
-                                        }else {
-                                            Toast.makeText(getActivity(),"提交失败",Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(getActivity(), "提交失败", Toast.LENGTH_SHORT).show();
                                         }
+
                                     } catch (JSONException e) {
-                                        Toast.makeText(getActivity(),"提交失败",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getActivity(), "提交失败", Toast.LENGTH_SHORT).show();
                                     }
-                                }
-
-                                @Override
-                                public void onStart(Request<String, ? extends Request> request) {
-                                    super.onStart(request);
-                                    progressBar.setVisibility(View.VISIBLE);
-                                }
-
-                                @Override
-                                public void onFinish() {
-                                    super.onFinish();
-                                    progressBar.setVisibility(View.GONE);
                                 }
 
                                 @Override
                                 public void onError(Response<String> response) {
                                     super.onError(response);
-                                    Toast.makeText(getActivity(),"提交失败",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(),Toast.LENGTH_LONG,Toast.LENGTH_LONG).show();
                                 }
                             });
+
+                }else {
+                    Toast.makeText(getActivity(),"请选择图片",Toast.LENGTH_LONG).show();
                 }
                 break;
         }
@@ -193,21 +188,67 @@ ProgressBar progressBar;
                 });
     }
 
-    String image = "";
+    String image1 = "", image2 = "", image3 = "", image4 = "", image5 = "", image6 = "";
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 100) {
             List<BaseMedia> list = Boxing.getResult(data);
+            RequestOptions options = new RequestOptions()
+                    .centerCrop()
+                    .placeholder(R.drawable.ic_boxing_default_image);
             if (list != null && list.size() > 0) {
-                RequestOptions options3 = new RequestOptions()
-                        .centerCrop()
-                        .placeholder(R.drawable.ic_boxing_default_image);
-                Glide.with(this)
-                        .load(list.get(0).getPath())
-                        .apply(options3)
-                        .into(ivIcon);
-                image = list.get(0).getPath();
+                switch (type) {
+                    case 1:
+                        Glide.with(getActivity())
+                                .load(list.get(0).getPath())
+                                .apply(options)
+                                .into(ivIcon1);
+                        image1 = list.get(0).getPath();
+                        break;
+
+                    case 2:
+                        Glide.with(getActivity())
+                                .load(list.get(0).getPath())
+                                .apply(options)
+                                .into(ivIcon2);
+                        image2 = list.get(0).getPath();
+                        break;
+
+                    case 3:
+
+                        Glide.with(getActivity())
+                                .load(list.get(0).getPath())
+                                .apply(options)
+                                .into(ivIcon3);
+                        image3 = list.get(0).getPath();
+                        break;
+
+                    case 4:
+                        Glide.with(getActivity())
+                                .load(list.get(0).getPath())
+                                .apply(options)
+                                .into(ivIcon4);
+                        image4 = list.get(0).getPath();
+                        break;
+
+                    case 5:
+                        Glide.with(getActivity())
+                                .load(list.get(0).getPath())
+                                .apply(options)
+                                .into(ivIcon5);
+                        image5 = list.get(0).getPath();
+                        break;
+                    case 6:
+                        Glide.with(getActivity())
+                                .load(list.get(0).getPath())
+                                .apply(options)
+                                .into(ivIcon6);
+                        image6 = list.get(0).getPath();
+                        break;
+
+                }
+
             }
         }
 

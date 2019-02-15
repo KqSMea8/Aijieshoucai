@@ -1,5 +1,6 @@
 package com.example.rongjiaying.aijieshoucai.util;
 
+import com.example.rongjiaying.aijieshoucai.callback.ComViewProgressBarStringCallback;
 import com.example.rongjiaying.aijieshoucai.callback.ProgressBarStringCallback;
 import com.example.rongjiaying.aijieshoucai.constant.UrlConstant;
 import com.lzy.okgo.OkGo;
@@ -251,13 +252,24 @@ public class HttpUtil {
                 .execute(stringCallback);
     }
 
-    public static void instanceorder(String prove_type, String order_code, String image, StringCallback stringCallback) {
+    public static void instanceorder(String order_code,
+                                     String business_license,
+                                     String insurance_policy,
+                                     String property_ownership_certificate,
+                                     String social_security ,
+                                     String sesame_credit_score,
+                                     String crf,
+                                     ComViewProgressBarStringCallback stringCallback) {
         OkGo.<String>post(UrlConstant.instanceorder)
                 .tag("instanceorder")
                 .cacheKey("cacheKey")
-                .params("prove_type", prove_type)
                 .params("order_code", order_code)
-                .params("prove_type_name", new File(image))
+                .params("business_license", new File(business_license))
+                .params("insurance_policy", new File(insurance_policy))
+                .params("property_ownership_certificate", new File(property_ownership_certificate))
+                .params("social_security", new File(social_security))
+                .params("sesame_credit_score", new File(sesame_credit_score))
+                .params("crf", new File(crf))
                 .cacheMode(CacheMode.DEFAULT)
                 .execute(stringCallback);
     }
@@ -560,7 +572,7 @@ public class HttpUtil {
      * @param url
      * @param userid
      */
-    public static void myRecommendation(String url, String userid ,ProgressBarStringCallback progressBarStringCallback) {
+    public static void myRecommendation(String url, String userid, ProgressBarStringCallback progressBarStringCallback) {
         OkGo.<String>post(url)
                 .tag("editPhone")
                 .cacheKey("cacheKey")

@@ -36,27 +36,65 @@ public class OrderDetailActivity extends BaseActivity implements View.OnClickLis
 
         AppCompatTextView tvStatus = findViewById(R.id.tv_status);
         if (type == 0) {
-            switch (orderListBean.getStatus()) {
-                case 2:
-                case 3:
-                    tvStatus.setText("初审中");
-                    tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
-                    break;
-                case 4:
-                    tvStatus.setText("终审中");
-                    tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
-                    break;
-                case 5:
-                case 6:
-                    if (orderListBean.getBackStatus() == 1) {
-                        tvStatus.setText("请补全资料");
-                        tvStatus.setTextColor(getResources().getColor(R.color.color_4C5CF7));
-                    } else {
-                        tvStatus.setText("已拒批");
-                        tvStatus.setTextColor(getResources().getColor(R.color.color_e92c2a));
-                    }
+            if ((orderListBean.getStatus()+"").equals("1"))
+            {
+                tvStatus.setText("待初审");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
+            }
+            else if ((orderListBean.getStatus()+"").equals("2"))
+            {
+                tvStatus.setText("初审待复审");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
+            }
+            else if ((orderListBean.getStatus()+"").equals("3"))
+            {
+                tvStatus.setText("初审增添资料待上传");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
+            }
+            else if ((orderListBean.getStatus()+"").equals("4"))
+            {
+                tvStatus.setText("初审增添资料待审核");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
+            }
+            else if ((orderListBean.getStatus()+"").equals("5"))
+            {
+                tvStatus.setText("初审增添资料待复审");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
+            }
+            else if ((orderListBean.getStatus()+"").equals("6"))
+            {
+                tvStatus.setText("待指派装G");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
+            }
+            else if ((orderListBean.getStatus()+"").equals("7"))
+            {
+                tvStatus.setText("待装G");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
+            }
+            else if ((orderListBean.getStatus()+"").equals("8"))
+            {
+                tvStatus.setText("待指派权证");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
+            }
+            else if ((orderListBean.getStatus()+"").equals("9"))
+            {
+                tvStatus.setText("待权证");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
+            }
+            else if ((orderListBean.getStatus()+"").equals("10"))
+            {
+                tvStatus.setText("已完成");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
+            }
+            else if ((orderListBean.getStatus()+"").equals("1-1"))
+            {   tvStatus.setText("请补全资料");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_4C5CF7));
 
-                    break;
+
+            }
+            else if ((orderListBean.getStatus()+"").equals("2-1"))
+            {   tvStatus.setText("请补全资料");
+                tvStatus.setTextColor(getResources().getColor(R.color.color_4C5CF7));
             }
         } else if (type == 1) {
             tvStatus.setText("签约中");
