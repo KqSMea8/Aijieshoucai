@@ -14,6 +14,7 @@ import com.example.rongjiaying.aijieshoucai.home.bean.ProductListBean;
 import com.example.rongjiaying.aijieshoucai.login.activity.ForGotPasswordActivity;
 import com.example.rongjiaying.aijieshoucai.login.activity.LoginActivity;
 import com.example.rongjiaying.aijieshoucai.login.activity.RegistActivity;
+import com.example.rongjiaying.aijieshoucai.login.activity.RegistServiceActivity;
 import com.example.rongjiaying.aijieshoucai.message.activity.ContactListActivity;
 import com.example.rongjiaying.aijieshoucai.message.activity.ExserviceActivity;
 import com.example.rongjiaying.aijieshoucai.my.activity.AboutUsActivity;
@@ -444,6 +445,17 @@ public class IntentUtil {
      */
     public static void Intent_ContactListActivity(Activity activity) {
         Intent intent = new Intent(activity, ContactListActivity.class);
+        activity.startActivity(intent);
+    }
+
+    /**
+     * 注册  协议
+     *
+     * @param activity
+     */
+    public static void Intent_RegistServiceActivity(Activity activity,int type) {
+        Intent intent = new Intent(activity, RegistServiceActivity.class);
+        intent.putExtra("type",type);
         activity.startActivity(intent);
     }
 }

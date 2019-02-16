@@ -249,8 +249,9 @@
                     android:textSize="@dimen/dimen_14sp" />
 
                 <android.support.v7.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/dimen_20dp"
                     android:src="@drawable/icon_more" />
             </LinearLayout>
 
@@ -286,8 +287,9 @@
                     android:textSize="@dimen/dimen_14sp" />
 
                 <android.support.v7.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/dimen_20dp"
                     android:src="@drawable/icon_more" />
             </LinearLayout>
 

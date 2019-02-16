@@ -333,7 +333,7 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote"></service>
+            android:process=":remote" />
 
         <!-- 如果需要使用到位置服务，需要更换百度地图apikey为自己的apikey -->
         <meta-data
@@ -343,7 +343,7 @@
         <activity
             android:name="jiguang.chat.activity.WelcomeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/WelcomeStyle"></activity>
+            android:theme="@style/WelcomeStyle" />
         <activity
             android:name="jiguang.chat.activity.LoginActivity"
             android:screenOrientation="portrait" />
@@ -361,7 +361,7 @@
         <activity
             android:name="jiguang.chat.activity.ResetPasswordActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/BaseThemes"></activity>
+            android:theme="@style/BaseThemes" />
         <activity
             android:name="jiguang.chat.activity.FeedbackActivity"
             android:screenOrientation="portrait"
@@ -596,7 +596,8 @@
         <activity
             android:name=".message.activity.ContactListActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".my.activity.OrderActivity"></activity>
+        <activity android:name=".my.activity.OrderActivity" />
+        <activity android:name=".login.activity.RegistServiceActivity"></activity>
     </application>
 
 </manifest>

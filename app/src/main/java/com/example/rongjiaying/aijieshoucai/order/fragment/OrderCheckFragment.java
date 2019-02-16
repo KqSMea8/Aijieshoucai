@@ -99,8 +99,7 @@ public class OrderCheckFragment extends BaseFragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         orderListAdapter = new OrderListAdapter(getActivity(), type);
         recyclerView.setAdapter(orderListAdapter);
-        if (loginBean!=null&&!Judge.getBoolean_isNull(loginBean.getUserId()))
-        {
+        if (loginBean != null && !Judge.getBoolean_isNull(loginBean.getUserId())) {
             initOrderType();
         }
 
@@ -115,8 +114,7 @@ public class OrderCheckFragment extends BaseFragment {
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
-                if (loginBean!=null&&!Judge.getBoolean_isNull(loginBean.getUserId()))
-                {
+                if (loginBean != null && !Judge.getBoolean_isNull(loginBean.getUserId())) {
                     page = 0;
                     initOrderType();
                     refreshlayout.finishRefresh(2000/*,false*/);//传入false表示刷新失败
@@ -127,8 +125,7 @@ public class OrderCheckFragment extends BaseFragment {
         refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-                if (loginBean!=null&&!Judge.getBoolean_isNull(loginBean.getUserId()))
-                {
+                if (loginBean != null && !Judge.getBoolean_isNull(loginBean.getUserId())) {
                     page = page + 1 + limit;
                     initOrderType();
                     refreshLayout.finishLoadMore(200);
@@ -171,8 +168,8 @@ public class OrderCheckFragment extends BaseFragment {
             //签约中
             @Override
             public void checkMessageSigning(OrderListBean orderListBean) {
-                IntentUtil.Intent_OrderSigningActivity(getActivity(),
-                        orderListBean);
+                IntentUtil.Intent_OrderDetailActivity(getActivity(),
+                        orderListBean, type);
             }
         });
         return view;
@@ -208,7 +205,7 @@ public class OrderCheckFragment extends BaseFragment {
                             org.json.JSONObject jsonObject = new org.json.JSONObject(response.body());
 
                             int code = jsonObject.getInt("code");
-                            Log.i("asdf","obj "+jsonObject.getString("msg"));
+                            Log.i("asdf", "obj " + jsonObject.getString("msg"));
                             if (code == 0 && page == 0) {
                                 List<OrderListBean> orderListBeans = com.alibaba.fastjson.JSONObject.parseArray(jsonObject.getString("msg"), OrderListBean.class);
                                 if (page == 0) {

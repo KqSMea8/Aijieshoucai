@@ -284,6 +284,8 @@ public class MyFragment extends BaseFragment implements View.OnClickListener {
                             IntentUtil.Intent_MyAchievementActivity(getActivity());
                         } else if (message.equals("我的推荐")) {
                             IntentUtil.Intent_MyRecommendationActivity(getActivity());
+                        }else if (message.equals("团队管理")) {
+                            IntentUtil.Intent_MyRecommendationActivity(getActivity());
                         }else if (message.equals("分享")) {
                             IntentUtil.Intent_ShareActivity(getActivity());
                         }

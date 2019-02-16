@@ -476,5 +476,8 @@
     <string name="scan_barcode_title">条形码扫描</string>
     <string name="scan_qrcode_title">返回</string>
     <string name="scan_qrcode_hint">将取景框对准二维码，即可自动扫描</string>
+    <string name="string_registcbmessage">我已经阅读并同意服务协议和隐私协议</string>
+    <string name="string_registcbmessage1">服务协议</string>
+    <string name="string_registcbmessage2">隐私协议</string>
     <!-- 极光im-->
 </resources>

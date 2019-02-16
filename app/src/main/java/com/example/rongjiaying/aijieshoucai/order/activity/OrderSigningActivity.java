@@ -52,7 +52,11 @@ public class OrderSigningActivity extends BaseActivity implements View.OnClickLi
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         orderSigningAdapter = new OrderSigningAdapter(getActivity());
         recyclerView.setAdapter(orderSigningAdapter);
-        initData();
+    //    initData();
+
+
+
+
     }
 
     private void initData() {

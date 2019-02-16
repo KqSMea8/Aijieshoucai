@@ -35,7 +35,7 @@ public class OrderDetailActivity extends BaseActivity implements View.OnClickLis
 
 
         AppCompatTextView tvStatus = findViewById(R.id.tv_status);
-        if (type == 0) {
+        if (type == 0||type == 1) {
             if ((orderListBean.getStatus()+"").equals("1"))
             {
                 tvStatus.setText("待初审");
@@ -96,10 +96,7 @@ public class OrderDetailActivity extends BaseActivity implements View.OnClickLis
             {   tvStatus.setText("请补全资料");
                 tvStatus.setTextColor(getResources().getColor(R.color.color_4C5CF7));
             }
-        } else if (type == 1) {
-            tvStatus.setText("签约中");
-            tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
-        } else if (type == 2) {
+        }  else if (type == 2) {
             tvStatus.setText("已放款");
             tvStatus.setTextColor(getResources().getColor(R.color.color_178C68));
         }

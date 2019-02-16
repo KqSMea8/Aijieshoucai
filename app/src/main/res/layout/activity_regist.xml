@@ -5,214 +5,243 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".login.activity.RegistActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <include layout="@layout/toplayout" />
 
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toplayout" />
 
 
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/iv_loginbg"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_100dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/regist_background_red1" />
+            android:layout_height="wrap_content">
 
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="@dimen/dimen_120dp"
-            android:layout_marginEnd="@dimen/dimen_10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="@dimen/dimen_10dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="@dimen/dimen_10px"
-            app:contentPaddingLeft="@dimen/dimen_15dp"
-            app:contentPaddingRight="@dimen/dimen_15dp">
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_loginbg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/regist_background_red1" />
 
-            <LinearLayout
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_21dp"
-                    android:text="@string/string_phonenumber"
-                    android:textColor="@color/color_2f2f2f"
-                    android:textSize="@dimen/dimen_12sp" />
-
-
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/et_phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_3dp"
-                    android:background="@color/white"
-                    android:hint="@string/string_hint_phone"
-                    android:textColor="@color/color_2f2f2f"
-                    android:textSize="@dimen/dimen_14sp" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="@dimen/dimen_3dp"
-                    android:background="@color/color_d7d7d7" />
-                <!-- 验证码-->
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_6dp"
-                    android:text="@string/string_code"
-                    android:textColor="@color/color_2f2f2f"
-                    android:textSize="@dimen/dimen_12sp" />
-
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/dimen_120dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dimen_10px"
+                app:contentPaddingLeft="@dimen/dimen_15dp"
+                app:contentPaddingRight="@dimen/dimen_15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_3dp"
-                    android:orientation="horizontal">
-
-                    <android.support.v7.widget.AppCompatEditText
-                        android:id="@+id/et_code"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/white"
-                        android:hint="@string/string_hint_code"
-                        android:textColor="@color/color_2f2f2f"
-                        android:textSize="@dimen/dimen_14sp" />
+                    android:orientation="vertical">
 
 
                     <android.support.v7.widget.AppCompatTextView
-                        android:id="@+id/tv_sendcode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_getcode"
-                        android:textColor="@color/color_202B97"
+                        android:layout_marginTop="@dimen/dimen_21dp"
+                        android:text="@string/string_phonenumber"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/white"
+                        android:hint="@string/string_hint_phone"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/color_d7d7d7" />
+                    <!-- 验证码-->
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_6dp"
+                        android:text="@string/string_code"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/et_code"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:hint="@string/string_hint_code"
+                            android:textColor="@color/color_2f2f2f"
+                            android:textSize="@dimen/dimen_14sp" />
+
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_sendcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_getcode"
+                            android:textColor="@color/color_202B97"
+                            android:textSize="@dimen/dimen_14sp" />
+                    </LinearLayout>
+                    <!-- 验证码-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/color_d7d7d7" />
+
+                    <!-- 密码-->
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_6dp"
+                        android:text="@string/string_password"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/white"
+                        android:hint="@string/string_hint_password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/color_d7d7d7" />
+                    <!-- 密码-->
+
+                    <!-- 确认密码-->
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_6dp"
+                        android:text="@string/string_commitpassword"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_commitpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/white"
+                        android:hint="@string/string_hint_commitpassword"
+                        android:inputType="textPassword"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/color_d7d7d7" />
+                    <!-- 确认密码-->
+                    <!-- 邀请码-->
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_6dp"
+                        android:text="@string/string_invitationcode"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_invitationcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/white"
+                        android:hint="@string/string_hint_invitationcode"
+                        android:textColor="@color/color_2f2f2f"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:background="@color/color_d7d7d7" />
+                    <!-- 邀请码-->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_3dp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_cbtext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:text="@string/string_registcbmessage"
+                            android:textColor="@color/color_2f2f2f"
+                            android:textSize="@dimen/dimen_14sp" />
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_regist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginBottom="@dimen/dimen_15dp"
+                        android:background="@drawable/circle_colorprimal_12px"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/string_regist"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/dimen_14sp" />
                 </LinearLayout>
-                <!-- 验证码-->
+            </android.support.v7.widget.CardView>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="@dimen/dimen_3dp"
-                    android:background="@color/color_d7d7d7" />
+        </RelativeLayout>
+    </LinearLayout>
 
-                <!-- 密码-->
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_6dp"
-                    android:text="@string/string_password"
-                    android:textColor="@color/color_2f2f2f"
-                    android:textSize="@dimen/dimen_12sp" />
-
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/et_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_3dp"
-                    android:inputType="textPassword"
-                    android:background="@color/white"
-                    android:hint="@string/string_hint_password"
-                    android:textColor="@color/color_2f2f2f"
-                    android:textSize="@dimen/dimen_14sp" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="@dimen/dimen_3dp"
-                    android:background="@color/color_d7d7d7" />
-                <!-- 密码-->
-
-                <!-- 确认密码-->
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_6dp"
-                    android:text="@string/string_commitpassword"
-                    android:textColor="@color/color_2f2f2f"
-                    android:textSize="@dimen/dimen_12sp" />
-
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/et_commitpassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_3dp"
-                    android:background="@color/white"
-                    android:hint="@string/string_hint_commitpassword"
-                    android:inputType="textPassword"
-                    android:textColor="@color/color_2f2f2f"
-                    android:textSize="@dimen/dimen_14sp" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="@dimen/dimen_3dp"
-                    android:background="@color/color_d7d7d7" />
-                <!-- 确认密码-->
-                <!-- 邀请码-->
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_6dp"
-                    android:text="@string/string_invitationcode"
-                    android:textColor="@color/color_2f2f2f"
-                    android:textSize="@dimen/dimen_12sp" />
-
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/et_invitationcode"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_3dp"
-                    android:background="@color/white"
-                    android:hint="@string/string_hint_invitationcode"
-                    android:textColor="@color/color_2f2f2f"
-                    android:textSize="@dimen/dimen_14sp" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="@dimen/dimen_3dp"
-                    android:background="@color/color_d7d7d7" />
-                <!-- 邀请码-->
-
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/tv_regist"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_10dp"
-                    android:background="@drawable/circle_colorprimal_12px"
-                    android:gravity="center"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="@string/string_regist"
-                    android:layout_marginBottom="@dimen/dimen_15dp"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/dimen_14sp" />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-    </RelativeLayout>
-</LinearLayout>
     <ProgressBar
+        android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progressbar"
-        android:visibility="gone"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
 </RelativeLayout>

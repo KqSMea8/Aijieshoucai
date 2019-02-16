@@ -1,11 +1,18 @@
 package com.example.rongjiaying.aijieshoucai.login.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -20,6 +27,7 @@ import com.example.rongjiaying.aijieshoucai.constant.MyConstant;
 import com.example.rongjiaying.aijieshoucai.login.bean.LoginBean;
 import com.example.rongjiaying.aijieshoucai.login.dialogfragment.SelectGroupDialogFragment;
 import com.example.rongjiaying.aijieshoucai.util.HttpUtil;
+import com.example.rongjiaying.aijieshoucai.util.IntentUtil;
 import com.example.rongjiaying.aijieshoucai.util.Judge;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
@@ -42,6 +50,7 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
     AppCompatTextView tvSendCode;
     AppCompatEditText etPhone, etCode, etPassword, etCommitPassword, etInvitationcode;
     ProgressBar progressBar;
+    AppCompatTextView tvCbText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +78,40 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
         etCommitPassword = findViewById(R.id.et_commitpassword);
         etInvitationcode = findViewById(R.id.et_invitationcode);
 
+        tvCbText = findViewById(R.id.tv_cbtext);
+        String string = getResources().getString(R.string.string_registcbmessage);
+        String string1 = getResources().getString(R.string.string_registcbmessage1);
+        String string2 = getResources().getString(R.string.string_registcbmessage2);
 
+
+        SpannableString spannableString=new SpannableString(string);
+        ForegroundColorSpan blueSpan1 = new ForegroundColorSpan(Color.BLUE);
+        ForegroundColorSpan blueSpan2 = new ForegroundColorSpan(Color.BLUE);
+        spannableString.setSpan(blueSpan1, string.indexOf(string1), string.indexOf(string1) + string1.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(blueSpan2, string.indexOf(string2), string.indexOf(string2) + string2.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+
+
+        //设置部分文字点击事件
+        ClickableSpan clickableSpan1 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                IntentUtil.Intent_RegistServiceActivity(getActivity(),1);
+            }
+        };
+        spannableString.setSpan(clickableSpan1, string.indexOf(string1), string.indexOf(string1) + string1.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        //设置部分文字点击事件
+        ClickableSpan clickableSpan2 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                IntentUtil.Intent_RegistServiceActivity(getActivity(),2);
+            }
+        };
+        spannableString.setSpan(clickableSpan2, string.indexOf(string2), string.indexOf(string2) + string2.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+
+        tvCbText.setText(spannableString);
+        tvCbText.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     @Override
